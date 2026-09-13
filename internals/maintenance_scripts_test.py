@@ -36,7 +36,9 @@ from internals.webdx_feature_models import WebdxFeatures
 
 
 class EvaluateGateStatusTest(testing_config.CustomTestCase):
-    """Tests for the EvaluateGateStatus handler."""
+     self.handler = maintenance_scripts.EvaluateGateStatus
+     
+
 
     def setUp(self):
         """Set up the test environment."""

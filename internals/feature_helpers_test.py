@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Tests for the feature_helpers module, verifying feature filtering and stage logic."""
-
 from datetime import datetime
 from unittest import mock
 
@@ -70,13 +68,10 @@ class FeatureHelpersTest(testing_config.CustomTestCase):
     """Tests for feature helpers."""
 
     def setUp(self):
-        """Set up the test environment."""
+        
+        feature_type=core_enums.FEATURE_TYPE_EXISTING_ID,
+            impl_status_chrome=1, 
         self.feature_2 = FeatureEntry(
-            name='feature b',
-            summary='sum',
-            owner_emails=['feature_owner@example.com'],
-            category=1,
-            updated=datetime(2020, 4, 1),
             feature_type=core_enums.FEATURE_TYPE_EXISTING_ID,
             impl_status_chrome=1,
         )
